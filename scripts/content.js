@@ -1,22 +1,13 @@
-const article = document.querySelector("article");
+console.log(" we are live");
 
-// `document.querySelector` may return null if the selector doesn't match anything.
-if (article) {
-  const text = article.textContent;
-  const wordMatchRegExp = /[^\s]+/g; // Regular expression
-  const words = text.matchAll(wordMatchRegExp);
-  // matchAll returns an iterator, convert to array to get word count
-  const wordCount = [...words].length;
-  const readingTime = Math.round(wordCount / 200);
-  const badge = document.createElement("p");
-  // Use the same styling as the publish information in an article's header
-  badge.classList.add("color-secondary-text", "type--caption");
-  badge.textContent = `⏱️ ${readingTime} min read`;
+const images = document.getElementsByTagName('img');
 
-  // Support for API reference docs
-  const heading = article.querySelector("h1");
-  // Support for article docs with date
-  const date = article.querySelector("time")?.parentNode;
+console.log(images);
 
-  (date ?? heading).insertAdjacentElement("afterend", badge);
+for (let i = 0; i < images.length; i++) {
+  console.log(images[i].src)
+  images[i].src = "images/scaryDog.jpg";
 }
+// for (var i = 0, l = images.length; i < l; i++) {
+//   images[i].src = 'http://placekitten.com/' + images[i].width + '/' + images[i].height;
+// }
