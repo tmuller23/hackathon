@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
  
-  "name": "Modify CSS and HTML",
-  "version": "0.1.0",
-  "description": "Lateral blog post demo extension",
+  "name": "dog pics",
+  "version": "1.0",
+  "description": "Changing random dog pics",
  
   "content_scripts": [{
     "js": ["scripts/content.js"],

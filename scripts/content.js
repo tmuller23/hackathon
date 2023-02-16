@@ -16,14 +16,14 @@ fetch('https://random.dog/doggos')
 function changePics(data) {
   let cleanedUpData = [];
   data.forEach(img => {
-    if (img.slice(-3)) {
+    if (img.slice(-3) === 'jpg') {
       cleanedUpData.push(img);
     }
   })
   for (let i = 0; i < images.length; i++) {
     var item = cleanedUpData[Math.floor(Math.random()*cleanedUpData.length)];
     console.log(item);
-    images[i].src = "random.dog/" + item;
+    images[i].src = "https://random.dog/" + item;
   }
 }
 
